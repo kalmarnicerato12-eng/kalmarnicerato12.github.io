@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect | Comunidad de Estudio con IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Edu<span>Connect</span></div>
+            <input type="text" class="search-bar" placeholder="Buscar dudas, temas, usuarios...">
+            <div class="user-badge">Estudiante Pro</div>
+        </div>
+    </nav>
+
+    <main class="main-layout">
+        <aside class="sidebar">
+            <h3>Asignaturas</h3>
+            <ul id="categories-list">
+                <li class="active" data-category="General">📚 General</li>
+                <li data-category="Matemáticas">🔢 Matemáticas</li>
+                <li data-category="Química">🧪 Química</li>
+                <li data-category="Programación">💻 Programación</li>
+                <li data-category="Historia">📜 Historia</li>
+                <li data-category="Ciencias">🔬 Ciencias</li>
+            </ul>
+        </aside>
+
+        <section class="feed-container">
+            <div class="create-post">
+                <h3>¿En qué necesitas ayuda hoy?</h3>
+                <textarea id="main-input" placeholder="Escribe tu pregunta aquí (ej. '¿Cuál es la fórmula del agua?')..."></textarea>
+                <div class="post-footer">
+                    <select id="category-select">
+                        <option value="General">General</option>
+                        <option value="Matemáticas">Matemáticas</option>
+                        <option value="Química">Química</option>
+                        <option value="Programación">Programación</option>
+                        <option value="Historia">Historia</option>
+                        <option value="Ciencias">Ciencias</option>
+                    </select>
+                    <button id="btn-publish">Publicar Pregunta</button>
+                </div>
+            </div>
+
+            <div id="questions-feed">
+                </div>
+        </section>
+
+        <aside class="widgets">
+            <div class="widget-card">
+                <h4>Top Contribuidores</h4>
+                <p>🥇 Juan Pérez - 45 pts</p>
+                <p>🥈 María G. - 38 pts</p>
+                <p>🥉 Luis R. - 29 pts</p>
+                <p>🥉   kalmar nicerato</p>
+            </div>
+            <div class="widget-card">
+                <h4>Tendencias</h4>
+                <p>#CalculoDiferencial</p>
+                <p>#RevolucionFrancesa</p>
+                <p>#POOconPython</p>
+            </div>
+        </aside>
+    </main>
+
+    <div id="ai-chatbot">
+        <div class="chat-header">
+            <span>🤖 EduBot (IA)</span>
+            <button id="toggle-chat-visibility" class="toggle-btn">_</button>
+        </div>
+        <div id="chat-window" class="chat-hidden">
+            <div class="msg bot">¡Hola! Soy EduBot. ¿Tienes alguna duda rápida de matemáticas, historia o ciencias?</div>
+        </div>
+        <div class="chat-input-area chat-hidden">
+            <input type="text" id="user-msg" placeholder="Pregunta a la IA (ej. '¿Qué es la fotosíntesis?')...">
+            <button id="send-ai">⚡</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
